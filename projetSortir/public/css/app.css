@@ -1,0 +1,254 @@
+:root {
+    --couleur-clair: #74b7e3;
+    --couleur-fonce: #17577a;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #EEE;
+    font-family: 'Comforta', serif;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+header {
+    background: linear-gradient(var(--couleur-fonce), var(--couleur-clair));
+    position: relative;
+    color: white;
+    font-family: 'Comforta', serif;
+    width: 100%;
+}
+
+h1 {
+
+    font-variant-caps: small-caps;
+    text-align: center;
+}
+
+h2 {
+    padding: 10px;
+    color: var(--couleur-fonce);
+    text-align: center;
+}
+
+h4 {
+    font-size: x-large;
+    color: var(--couleur-clair);
+}
+
+p, section, label {
+    color: black;
+}
+
+
+footer {
+    justify-content: center;
+}
+
+footer p {
+    color: white;
+    padding: 5px;
+    justify-content: center;
+}
+
+header img {
+    height: 90px;
+}
+
+#date{
+    font-size: small;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+@media screen and (min-width: 600px) {
+
+    #toggle:checked + .main_pages {
+        display: flex;
+    }
+
+    #menu_label, #toggle {
+        display: none;
+    }
+
+    nav {
+        margin: auto;
+        height: 100px;
+    }
+
+    nav .main_pages {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav .main_pages a {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 100px;
+        text-decoration: none;
+        color: white;
+    }
+
+    body {
+        margin: 0;
+        position: relative;
+        top: 0;
+        bottom: 100px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    tbody {
+        height: auto;
+        overflow: scroll;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        background: var(--couleur-clair);
+        width: 100%;
+        overflow: hidden;
+        margin-top: 1.5rem;
+    }
+
+
+    #btn_new {
+        visibility: visible;
+    }
+
+    #filtreAccueil input {
+        margin-left: 5px;
+    }
+
+    #filtreAccueil label {
+        margin-bottom: 5px;
+    }
+
+
+    #cache-small {
+        display: none;
+    }
+
+
+    .affichage_smartphone {
+        margin: 15px;
+        width: 100%;
+        display: block;
+    }
+
+
+    .affichage_grand {
+        display: none;
+    }
+
+    #tablette{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    header img {
+        height: 50px;
+    }
+
+    body {
+        margin: 0;
+        position: fixed;
+        top: 0;
+        overflow: scroll;
+        bottom: 50px;
+        width: 100%;
+
+    }
+
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        background: var(--couleur-clair);
+        width: 100%;
+        overflow: hidden;
+    }
+
+    nav .main_pages {
+        display: none;
+        flex-direction: column;
+        background: var(--couleur-clair);
+        width: 150px;
+    }
+
+    nav .main_pages a {
+        text-decoration: none;
+        color: white;
+        margin: 10px;
+    }
+
+    #menu_label {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+
+    #toggle:checked + .main_pages {
+        display: flex;
+    }
+
+    #btn_new, #toggle, #smartphone, #filtreAccueil {
+        display: none;
+
+    }
+
+    .affichage_grand {
+        visibility: hidden;
+    }
+
+    .affichage_smartphone {
+        margin: 5px;
+        width: 100%;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+
+    header {
+        font-size: large;
+        padding: 20px;
+    }
+
+    #tableau_sorties {
+        width: 80%;
+    }
+
+    .affichage_smartphone {
+        display: none;
+    }
+
+    .affichage_grand {
+        margin: 5px;
+        width: 100%;
+        display: block;
+    }
+
+    #tablette{
+        display: revert;
+    }
+}
